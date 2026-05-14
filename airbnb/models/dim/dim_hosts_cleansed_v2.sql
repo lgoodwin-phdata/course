@@ -1,4 +1,5 @@
 
+
 with src_hosts as (
     select * from {{ref('src_hosts')}}
 
@@ -6,7 +7,7 @@ with src_hosts as (
 
 select 
     host_id, 
-    NVL(host_name, 'Anonymous') as host_name, 
+    NVL(host_name, 'N/A') as host_name, 
     IS_SUPERHOST, 
     CREATED_AT, 
     UPDATED_AT
